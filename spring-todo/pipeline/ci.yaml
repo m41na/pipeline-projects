@@ -1,2 +1,4 @@
 project:
-  stack: react
+  stack: java
+  build:
+    tool: maven

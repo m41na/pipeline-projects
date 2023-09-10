@@ -1,0 +1,4 @@
+project:
+  stack: react
+  build:
+    tool: gradle

@@ -34,3 +34,17 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+jar {
+	manifest {
+		attributes('Main-Class': 'works.hop.todo.SpringTodoApplication',
+				'Implementation-Title': project.name,
+				'Implementation-Version': project.version)
+	}
+	archiveBaseName.set("spring-todo-app")
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	from {
+		(configurations.compileClasspath + configurations.runtimeClasspath).collect { it.isDirectory() ? it : zipTree(it) }
+	}
+}

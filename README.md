@@ -8,3 +8,8 @@ The ultimate goal is to create a unified pipeline for projects using different b
 2. Distill the commonalities to a single jenkins file and have placeholder functions to provide specialized functionality
 3. Use yaml or json files to provide additional metadata to help pipeline make smarter decisions
 4. Try out unified pipeline with same projects tested previously
+
+> Starting local docker container
+
+docker run --name local-postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d --restart unless-stopped postgres
+
